@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #fff5ff;
+}
+body {
+  height: 100vh;
+}
+#main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 85vh;
+}
+.eq {
+  display: flex;
+  justify-content: center;
+  line-height: 10vh;
+  font-size: 30px;
+  padding: 5vh;
+}
+input {
+  width: 5%;
+  margin: 0 0.5vw;
+  border: 2px solid #d8d8d8;
+  border-radius: 4px;
+  height: 5vh;
+  margin: 2.5vh 0.7vh;
+  font-size: 20px;
+}
+span {
+  margin: 0 0.5vw;
+}
+h1 {
+  padding-bottom: 5vh;
+}
+button {
+  background-color: #fff;
+  width: 15%;
+  border: 2px solid #d8d8d8;
+  border-radius: 6px;
+  height: 8vh;
+  font-size: 4vh;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #d8d8d8;
+  margin-bottom: 4vh;
+}
+
+footer {
+  text-align: center;
+  height: 15vh;
+  font-size: 18px;
+}
+.root {
+  height: 5vh;
+  text-align: center;
+}
+
+#notq {
+  padding: 2vh;
+  line-height: 2vh;
+  height: 15vh;
+}
+span.colored {
+  margin: 0;
+  color: red;
+}

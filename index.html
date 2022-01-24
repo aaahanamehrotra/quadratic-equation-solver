@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>SoQueq</title>
+  </head>
+  <body>
+    <div id="main">
+      <h1>
+        <span class="colored">So</span>lve
+        <span class="colored">Qu</span>adratic
+        <span class="colored">Eq</span>uations
+      </h1>
+      <div class="eq">
+        <input id="a" type="number" value="0" />
+        x<sup>2</sup><span>+</span>
+        <input id="b" type="number" value="0" />
+        x<span>+</span>
+        <input id="c" type="number" value="0" />
+        = 0
+      </div>
+      <button>Solve</button>
+      <div id="notq"></div>
+    </div>
+    <footer>Made by Aaahana Mehrotra</footer>
+    <script>
+      let a = document.querySelector("#a");
+      let b = document.querySelector("#b");
+      let c = document.querySelector("#c");
+      document.querySelector("button").addEventListener("click", submit);
+      console.log(a, b, c);
+      function submit() {
+        console.log(a.value, b.value, c.value);
+        if (a.value == 0) {
+          document.querySelector("#notq").innerHTML =
+            "the coefficient of x<sup>2</sup> cannot be 0";
+        } else {
+          document.querySelector("#notq").innerHTML = "";
+          let d = b.value ** 2 - 4 * a.value * c.value;
+          console.log(d);
+          if (d < 0) {
+            document.querySelector("#notq").innerHTML = "No real roots";
+          } else {
+            let denominator = 2 * a.value;
+            const alpha = (-b.value + d ** 0.5) / denominator;
+            const beta = (-b.value - d ** 0.5) / denominator;
+            console.log(alpha, beta);
+            document.querySelector(
+              "#notq"
+            ).innerHTML = `<div class="root">&alpha; = ${alpha}</div><div class="root">	&beta; = ${beta}</div>`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
